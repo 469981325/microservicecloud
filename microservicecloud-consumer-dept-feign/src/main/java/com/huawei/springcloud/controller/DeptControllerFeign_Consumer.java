@@ -16,12 +16,12 @@ public class DeptControllerFeign_Consumer {
     @Autowired
     private DeptClientService deptClientService;
 
-    @RequestMapping(value = "/conusmer/dept/add")
+    @RequestMapping(value = "/consumer/dept/add")
     public boolean add(Dept dept){
         return deptClientService.add(dept);
     }
 
-    @RequestMapping(value = "/conusmer/dept/get/{id}")
+    @RequestMapping(value = "/consumer/dept/get/{id}")
     public Dept get(@PathVariable("id") Long id){
         return deptClientService.get(id);
     }
